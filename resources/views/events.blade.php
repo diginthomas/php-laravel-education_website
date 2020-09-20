@@ -26,6 +26,23 @@
   </div>
 </div>
 
+  
+</div>
+<div class="card text-white bg-success  mb-3" style="max-width: 100rem;">
+  <div class="card-header"><b>Date:10/10/2020</b></div>
+  <div class="card-body">
+    <h5 class="card-title">Machine learning</h5>
+    <p class="card-text">
+       <button type="button" class="btn btn-warning"><b>Time:</b> 9:30 am </button>
+      <button type="button" class="btn btn-warning"><b>Location:</b> kochi</button>
+        <button type="button" class="btn btn-warning"><b>Instructor:</b> Tony Stark</button>
+          
+    </p>
+    <h5>Entry type: free</h5> <h5><b>Regiseration :</b>145855</h5>
+  </div>
+
+
+
 
 
 </body>

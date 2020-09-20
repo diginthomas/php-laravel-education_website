@@ -32,8 +32,10 @@ class Application extends Controller
         return view('Recived_application',['user'=>$userapp]);
       }
 
-      public function DelelteApplication
-}
+      }
+
+
+
 
 
 
