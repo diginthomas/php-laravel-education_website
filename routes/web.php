@@ -25,3 +25,6 @@ Route::get("admin/logout",'Admin@logout');
 Route::get('admin/courses','CourseController@AdminViewCourse');
 Route::get('admin/application','Application@AdminShowApplication');
 Route::get("/events",'EventController@AllEvents');
+Route::get("/test",function(){
+	return view('newhome');
+});

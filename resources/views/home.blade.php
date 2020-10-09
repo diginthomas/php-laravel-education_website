@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/nav.css')}}">
 </head><body>
 
 
@@ -26,6 +27,30 @@
   </div>
 </nav>
 </nav>
+
+  <div>
+
+<div class="wrapper">
+    <ul>
+<li>home</li>
+<li><a href="/c">hh</a></li>
+<li>Services
+            <ul>
+<li>Marketing</li>
+<li>Design
+                    <ul>
+<li>Web</li>
+<li>Graphics</li>
+<li>Interior</li>
+</ul>
+</li>
+<li>Branding</li>
+</ul>
+</li>
+<li>Portfolio</li>
+<li>Contact</li>
+</ul>
+</div></div>
 
 
 
