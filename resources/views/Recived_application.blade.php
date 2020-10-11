@@ -9,7 +9,7 @@
 <nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
 
-   <a class="navbar-brand" href="admin/home">Admin Home</a>
+   <a class="navbar-brand" href="/admin_home">Admin Home</a>
 
   </div>
 </nav>

@@ -16,7 +16,7 @@
 <li><a  href="/courses">Courses </a></li>
 <li><a href="/events">Events</a></li>
 <li><a href="/courses/apply">Connect us </a></li>
-<li><a href="/login">Login</a></li>
+<li><a href="/admin_home">Login</a></li>
 </ul>
 </div>
 <div class="welcome-text">
@@ -25,7 +25,7 @@ join with us</h1>
 <a href="/courses/apply">Apply now</a>
     </div>
 </header>
-
+ .
 <div class="card">
   <div class="card-header">
     Feedback us

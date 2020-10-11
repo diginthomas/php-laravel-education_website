@@ -24,7 +24,8 @@ Route::get('admin/home','Admin@adminhome');
 Route::get("admin/logout",'Admin@logout');
 Route::get('admin/courses','CourseController@AdminViewCourse');
 Route::get('admin/application','Application@AdminShowApplication');
+Route::get('admin/events','EventController@Adminevents');
 Route::get("/events",'EventController@AllEvents');
-Route::get("/test",function(){
-	return view('newhome');
+Route::get("/admin_home",function(){
+	return view('Admin_home');
 });
