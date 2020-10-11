@@ -28,7 +28,10 @@
   </div>
 </div>
 <div>
-<form method="post" action="admin/events/store">
+
+
+<form method="post" action="/Admin-events/store">
+  @csrf
 	<table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -44,13 +47,13 @@
   <tbody>
  
     <tr>
-      <th scope="row"><input type="text" placeholder="event name" name=""></th>
-      <td><input type="text" placeholder="DD-MM-YYYY" name=""></td>
-      <td><input type="text" placeholder="HH:MM " name=""></td>
-      <td><input type="text" placeholder="location" name=""></td>
-      <td><input type="text" placeholder="Instructor" name=""></td>
-      <td><input type="text" placeholder="event type" name=""></td>
-      <td><input type="text" placeholder="number" name=""></td>
+      <th scope="row"><input type="text" placeholder="event name" name="Event-Name"></th>
+      <td><input type="text" placeholder="DD-MM-YYYY" name="Event-Date"></td>
+      <td><input type="text" placeholder="HH:MM " name="Event-Time"></td>
+      <td><input type="text" placeholder="location" name="Event-Location"></td>
+      <td><input type="text" placeholder="Instructor" name="Event-Instructor"></td>
+      <td><input type="text" placeholder="event type" name="Event-Type"></td>
+      <td><input type="text" placeholder="number" name="Event-Number"></td>
     </tr>
        <tr>
      
@@ -88,16 +91,16 @@
       <th scope="col">Contact num</th>
     </tr>
   </thead>
+   @foreach($event as $eve)
   <tbody>
- 
     <tr>
-      <th scope="row">Data science with python</th>
-      <td>22/10/2020</td>
-      <td>9:00 AM</td>
-      <td>Town Hall Ernakulam</td>
-      <td>Tony Stark</td>
-      <td>100 for each person</td>
-      <td>+9155555442</td>
+      <th scope="row">{{$eve->eventname}}</th>
+      <td>{{$eve->date}}</td>
+      <td>{{$eve->time}} AM</td>
+      <td>{{$eve->location}}</td>
+      <td>{{$eve->instructor}}</td>
+      <td>{{$eve->entrytype}}</td>
+      <td>{{$eve->contact}}</td>
     </tr>
        <tr>
      
@@ -105,6 +108,7 @@
     
     
   </tbody>
+  @endforeach
 </table></div>
 </body>
 </html>

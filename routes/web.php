@@ -26,6 +26,7 @@ Route::get('admin/courses','CourseController@AdminViewCourse');
 Route::get('admin/application','Application@AdminShowApplication');
 Route::get('admin/events','EventController@Adminevents');
 Route::get("/events",'EventController@AllEvents');
+Route::post('/Admin-events/store','EventController@AddEvent');
 Route::get("/admin_home",function(){
 	return view('Admin_home');
 });
