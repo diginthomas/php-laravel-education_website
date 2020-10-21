@@ -9,29 +9,42 @@ class Admin extends Controller
 { 
    
     public function login(){
-    	return view ('login');
+      $usr=new AdminData();
+    $usr = AdminData::find(3);
+    if($usr->status==true){
+
+      return view('Admin_home');
+    }
+    else{
+    	return view ('alogin');
+    }
 
     }
   public function clogin(Request $req){ 
+
   	$usr=new AdminData();
-  	$username=$req->post('username');
-  	$usr = AdminData::find(3);
-      if($usr->username==$username){
+    $usr = AdminData::find(3);
+  	$email=$req->post('Email');
+    $pass=$req->post('pass') ;
+  	
+      if( $usr->password==$pass and $usr->email==$email){
         
-        $usr->username=$username;
         $usr->status=true;
         $usr->save();
          
-        return 'okkk';
+        return view('Admin_home');
+      }
+      else{
+        return abort(401);
       }
 
-     
-      
-  }
+      }
+    
+
      public function adminhome(){
        $auth=AdminData::first();
        if($auth->status==false){
-        return 'please login bro';
+        return abort(401);
          
      }
      else{
@@ -42,7 +55,7 @@ class Admin extends Controller
       $auth=AdminData::first();
       $auth->status=false;
       $auth->save();
-      return redirect('/login');
+      return redirect('/');
      }
 
  }

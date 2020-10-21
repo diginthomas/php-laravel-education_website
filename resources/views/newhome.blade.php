@@ -16,7 +16,7 @@
 <li><a  href="/courses">Courses </a></li>
 <li><a href="/events">Events</a></li>
 <li><a href="/courses/apply">Connect us </a></li>
-<li><a href="/admin_home">Login</a></li>
+<li><a href="/A_login">Login</a></li>
 </ul>
 </div>
 <div class="welcome-text">

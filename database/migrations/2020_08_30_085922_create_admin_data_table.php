@@ -15,7 +15,7 @@ class CreateAdminDataTable extends Migration
     {
         Schema::create('admin_data', function (Blueprint $table) {
             $table->id();
-            $table->string('username',15);
+            $table->string('email',25);
             $table->string('password',20);
             $table->boolean('status');
             

@@ -7,6 +7,28 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+<script type="text/javascript">
+  function validate()
+  {
+  var a=document.forms["form"]["name"].value;
+if(a=="")
+{
+alert("please enter the Name ");
+document.form.name.focus();
+return false;
+}
+if(!NaN(a))
+{alert("Enter only character");
+document.form.name.focus();
+return false;
+}
+}
+</script>
+
+
+
+
 </head><body>
   <nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
@@ -56,11 +78,13 @@
     Apply Now
   </div>
 </div><div><br></div>
-<form action="/courses/apply/submited" method="post">
+
+
+<form action="/courses/apply/submited"  method="post" name="form" onsubmit="return validate()">
   @csrf
   <div class="row">
     <div class="col">  <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" name='firstname' placeholder="First name">
+      <input type="text" class="form-control" name='name' placeholder="First name">
     </div>
     <div class="col">  <label for="inputEmail4">Last Name</label>
       <input type="text" class="form-control" name='lastname' placeholder="Last name">

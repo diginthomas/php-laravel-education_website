@@ -11,7 +11,7 @@
  <a href="admin/events"> <button class="btn btn2"> Events</button></a>
 <a href="admin/application">  <button class="btn btn3">Applications</button></a>
  <a href="#"> <button class="btn btn4">Feedbacks</button></a>
-  <button class="btn btn4">logoout</button>
+ <a href="/admin/logout"> <button class="btn btn4">logout</button></a>
 
 
 </div>
