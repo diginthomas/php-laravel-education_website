@@ -36,6 +36,10 @@ class EventController extends Controller
   
 
      }
+     public function Delete_event(Events $eve){
+      $eve->delete();
+      return back();
+     }
 
 }
 

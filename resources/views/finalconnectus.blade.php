@@ -52,7 +52,7 @@ return false;
 </div>
   <div class="card text-center">
   <div class="card-header">
-    Edureka
+Alpha
   </div>
   <div class="card-body">
     <h5 class="card-title">Course Registration Form</h5>
@@ -84,36 +84,36 @@ return false;
   @csrf
   <div class="row">
     <div class="col">  <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" name='name' placeholder="First name">
+      <input type="text" class="form-control"required name='name' placeholder="First name">
     </div>
     <div class="col">  <label for="inputEmail4">Last Name</label>
-      <input type="text" class="form-control" name='lastname' placeholder="Last name">
+      <input type="text" class="form-control" required name='lastname' placeholder="Last name">
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" name='email' id="inputEmail4">
+      <input type="email" class="form-control" required name='email' id="inputEmail4">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Phone Number</label>
-      <input type="text" class="form-control" name='phonenumber' id="inputPassword4">
+      <input type="text" class="form-control" required name='phonenumber' id="inputPassword4">
     </div>
   </div>
  
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" name="address" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2">Address </label>
+    <input type="text" class="form-control" id="inputAddress2"required name="address" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">City</label>
-      <input type="text" name="city" class="form-control" id="inputCity">
+      <input type="text"  required name="city" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">State</label>
-      <select id="inputState" class="form-control" name='state'>
+      <select id="inputState" class="form-control" name='state' required>
         <option selected>Choose...</option>
         <option value="kerala">kerala</option>
         <option value="tamilnadu">tamilnadu</option>
@@ -124,7 +124,7 @@ return false;
   
   </div>
    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Courses</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name='courses'>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name='courses' required>
     <option selected name='courses'>Choose...</option>
     @foreach($Course as $c)
                             <option  value="{{$c->coursename}}" >{{$c->coursename}}</option>
@@ -132,8 +132,8 @@ return false;
                        
   </select>
    <in
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  </div><div class="shadow-sm p-3 mb-5 bg-white rounded">
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button></div>
 </form>
 <div>
   <br><br>
@@ -149,7 +149,7 @@ return false;
       <p>contact us</p>
       <p> <b>email:</b>diginthomas@gmail.com</p>
       <p><b>Phone:</b>+91252551155</p>
-      <footer class="blockquote-footer">Team <cite title="Source Title">Edukera</cite></footer>
+      <footer class="blockquote-footer">Team <cite title="Source Title">Alpha</cite></footer>
     </blockquote>
   </div>
 </div>

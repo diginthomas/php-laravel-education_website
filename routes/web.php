@@ -27,9 +27,13 @@ Route::get('admin/home','Admin@adminhome');
 
 Route::get("admin/logout",'Admin@logout');
 
-Route::get('admin/courses','CourseController@AdminViewCourse');
-Route::get('admin/application','Application@AdminShowApplication');
-Route::get('admin/events','EventController@Adminevents');
+Route::get('/admin-courses','CourseController@AdminViewCourse');
+Route::get('/admin-addcourse','CourseController@Addcourseform');
+Route::post("/Admin-storecourse",'CourseController@Storecourse');
+Route::post("/admin-deletecourse/{course}",'CourseController@Deletecourse');
+Route::get('/admin-application','Application@AdminShowApplication');
+Route::get('/admin-events','EventController@Adminevents');
 Route::get("/events",'EventController@AllEvents');
 Route::post('/Admin-events/store','EventController@AddEvent');
+Route::post('/admin/event_delete/{eve}','EventController@Delete_event');
 

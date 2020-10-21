@@ -38,7 +38,7 @@ join with us</h1>
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">Feedback</span>
   </div>
-  <input type="text" class="form-control" name='feedbacks'placeholder='Feedback us' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+  <input type="text" class="form-control" required name='feedbacks'placeholder='Feedback us' aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
 <button type="submit" class="btn btn-warning">submit</button>
 @error('feedback')
 </div><div class="alert alert-warning" role="alert">

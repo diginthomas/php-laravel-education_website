@@ -3,6 +3,18 @@
 <head>
 	<title>admin:events</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<script type="text/javascript">
+  function cinfirm()
+  {let a= confirm("Do you want to continue ?");
+  if(a == true){
+  return true;
+}
+  else{
+    return false;
+  }
+  }</script>
 </head>
 <body>
 <div>
@@ -47,13 +59,13 @@
   <tbody>
  
     <tr>
-      <th scope="row"><input type="text" placeholder="event name" name="Event-Name"></th>
-      <td><input type="text" placeholder="DD-MM-YYYY" name="Event-Date"></td>
-      <td><input type="text" placeholder="HH:MM " name="Event-Time"></td>
-      <td><input type="text" placeholder="location" name="Event-Location"></td>
-      <td><input type="text" placeholder="Instructor" name="Event-Instructor"></td>
-      <td><input type="text" placeholder="event type" name="Event-Type"></td>
-      <td><input type="text" placeholder="number" name="Event-Number"></td>
+      <th scope="row"><input type="text" placeholder="event name" required name="Event-Name"></th>
+      <td><input type="text" placeholder="DD-MM-YYYY" required name="Event-Date"></td>
+      <td><input type="text" placeholder="HH:MM " required name="Event-Time"></td>
+      <td><input type="text" placeholder="location" required name="Event-Location"></td>
+      <td><input type="text" placeholder="Instructor"required name="Event-Instructor"></td>
+      <td><input type="text" placeholder="event type"required name="Event-Type"></td>
+      <td><input type="text" placeholder="number"required name="Event-Number"></td>
     </tr>
        <tr>
      
@@ -103,8 +115,11 @@
       <td>{{$eve->contact}}</td>
     </tr>
        <tr>
-     
-      <td> <a href="/admin/event/delete"  class="btn btn-warning">Delete</a></td>
+     <form action="/admin/event_delete/{{$eve->id}}" method="post" onsubmit ="return cinfirm()">
+      @csrf
+      <td> <input type="submit"  class="btn btn-warning" value="Delete"></td>
+       <td> created at:{{$eve->created_at}}</td>
+      </form>
     
     
   </tbody>

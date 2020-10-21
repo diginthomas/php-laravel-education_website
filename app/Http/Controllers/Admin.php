@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 Use App\AdminData;
 Use App\Auth;
 class Admin extends Controller
-{ 
+{   
    
     public function login(){
       $usr=new AdminData();
@@ -48,7 +48,7 @@ class Admin extends Controller
          
      }
      else{
-      return 'welcome admin';
+      return view('Admin_home');
        }
      }
      public function logout(){
