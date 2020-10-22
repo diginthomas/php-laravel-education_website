@@ -5,11 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
     <title>courses</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </head>
   <body><nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
@@ -23,9 +24,8 @@
 </nav>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">All Courses  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cpu-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5A1.5 1.5 0 0 0 5 6.5v3A1.5 1.5 0 0 0 6.5 11h3A1.5 1.5 0 0 0 11 9.5v-3A1.5 1.5 0 0 0 9.5 5h-3zm0 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-</svg>
+    <h1 class="display-4">All Courses  <i class='fas fa-laptop-code' style='font-size:40px'></i>
+
     </h1>
     <p class="lead">we provide 24/7 community support for our students :)</p>
   </div>
@@ -37,14 +37,15 @@
 
     <div class="card">
   <div class="card-header">
-    Coureses
+    Coureses <i class='fas fa-code'></i>
   </div>
   <div class="card-body">
-    <h5 class="card-title"><b>{{$c->coursename}}</b></h5>
-    <p class="card-text"><b><i>{{$c->coursedesc}} </b></i> </p>
+    <h5 class="card-title"><b>{{$c->coursename}} </b></h5>
+    <p class="card-text">  <i>{{$c->coursedesc}} </i> </p>
     <p class="card-text">
-     <button type="button" class="btn btn-outline-secondary">Fess: {{$c->fees}}</button>
-     <button type="button" class="btn btn-outline-secondary">Duration: {{$c->duration}}</button>
+     <button type="button" class="btn btn-outline-secondary"><i class="fa fa-inr"></i>
+      {{$c->fees}}</button>
+     <button type="button" class="btn btn-outline-secondary"><i class="fa fa-calendar"></i> {{$c->duration}}</button>
          <a href="'/admin/{{$c->coursename}}" class="btn btn-info">offer</a>
      </p>
     <a href="/courses/apply" class="btn btn-danger">Apply now</a>
