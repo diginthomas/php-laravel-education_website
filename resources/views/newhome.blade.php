@@ -24,7 +24,8 @@
 	<header>
     <div class="wrapper">
         <div class="logo">
-            <img src="img/logo.png" alt="">
+            <img src="https://i.postimg.cc/GhHQTFZc/logo-transparent.png" alt="">
+
         </div>
 <ul class="nav-area">
 <li><a  href="/courses">Courses </a></li>
@@ -35,8 +36,8 @@
 </div>
 <div class="welcome-text">
         <h1>
-join with us</h1>
-<a href="/courses/apply">Apply now</a>
+Online Courses</h1>
+<a href="/courses">Get Started</a>
     </div>
 </header>
  
@@ -52,8 +53,8 @@ join with us</h1>
                  
                    <div class="form">
                        <h4>SIGN UP TO OUR NEWSLETTER</h4>
-                        <form id="search-form" class="form-search form-horizontal">
-                            <input type="text" class="input-search" placeholder="Email Address">
+                        <form id="search-form" class="form-search form-horizontal" action="/subscribed" method="post">@csrf
+                            <input type="text" class="input-search" placeholder="Email Address" name="Email">
                             <button type="submit" class="btn-search"><i class="fa fa-bell-o"></i> SUBMIT</button>
                         </form>
                     </div>

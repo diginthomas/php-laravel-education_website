@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-//use Illuminate\Http\Request;
-use App\Feedback;
-use App\Http\Requests\Feedbaks;
+use App\Mail\usermail;
+use Illuminate\Http\Request;
+use App\subscribers;
+use Illuminate\Support\Facades\Mail;
 
 
 
@@ -15,6 +15,13 @@ class Home extends Controller
       	return view('newhome');
       }
 
-   
+   public function Subscribed(Request $req){
+   	$sub=new Subscribers();
+    $sub->Email=$req->post('Email');
+    $sub->save();
+    Mail::to($req->post('Email'))->send(new usermail());
+    return back();
+
+   	  }
     
 }

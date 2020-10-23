@@ -42,14 +42,9 @@ class Admin extends Controller
     
 
      public function adminhome(){
-       $auth=AdminData::first();
-       if($auth->status==false){
-        return abort(401);
-         
-     }
-     else{
+     
       return view('Admin_home');
-       }
+       
      }
      public function logout(){
       $auth=AdminData::first();
