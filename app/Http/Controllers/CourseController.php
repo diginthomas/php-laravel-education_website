@@ -10,7 +10,7 @@ class CourseController extends Controller
     public function getCourse(){
        $courses=Course::all();
 
-    	return view('index',['course'=>$courses]);
+    	return view('course',['course'=>$courses]);
     }
    public function AdminViewCourse(){
    	$courses=Course::all();

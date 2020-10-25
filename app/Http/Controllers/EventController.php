@@ -8,7 +8,7 @@ class EventController extends Controller
 {
     public function AllEvents(){
         $event=Events::all();
-    	return view("events",['event'=>$event]);
+    	return view("newevent",['event'=>$event]);
     }
 
 

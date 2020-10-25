@@ -28,6 +28,6 @@ class usermail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.welcome');
+        return $this->markdown('email.booking_confirm');
     }
 }
