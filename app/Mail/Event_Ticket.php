@@ -16,7 +16,7 @@ class Event_Ticket extends Mailable
      *
      * @return void
      */
-    public function __construct( $event_ticket)
+    public function __construct($event_ticket)
     {
         $this->event_ticket=$event_ticket;
     }

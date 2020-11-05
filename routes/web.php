@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Mail;
 //home And subscribers
 Route::post('/subscribed','Home@Subscribed');
 Route::get('/','Home@home');
-
+Route::get('/admin-subscribers','Home@ViewSubscribers')->middleware('checkStatus');
+Route::post('admin/Delete-subscriber/{s}','Home@Delete_subscriber')->middleware('checkStatus');
 //courses
 Route::get('/courses','CourseController@getCourse');
 Route::get('/admin-courses','CourseController@AdminViewCourse')->middleware('checkStatus');

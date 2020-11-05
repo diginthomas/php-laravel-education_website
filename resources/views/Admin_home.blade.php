@@ -19,7 +19,7 @@
  <a href="/admin-courses"> <button class="btn btn1">Courses</button></a>
  <a href="/admin-events"> <button class="btn btn2"> Events</button></a>
 <a href="/admin-application">  <button class="btn btn3">Applications</button></a>
- <a href="#"> <button class="btn btn4">Feedbacks</button></a>
+ <a href="/admin-subscribers"> <button class="btn btn4">Subscribers</button></a>
  <a href="/admin/logout"> <button onclick="return confirm()" class="btn btn4">logout</button>
 
 
