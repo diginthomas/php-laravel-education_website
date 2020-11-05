@@ -22,7 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('location',20);
             $table->string('instructor',20);
             $table->string('entrytype',20)->default('free');
-            $table->string('contact',12);
+            $table->integer('seats');
 
             $table->timestamps();
         });

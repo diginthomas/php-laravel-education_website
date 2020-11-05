@@ -22,7 +22,7 @@ Route::get('/courses/apply','application@showApplication');
 Route::post('/courses/apply/submited','application@getApplication');
 Route::get('/admin-application','Application@AdminShowApplication')->middleware('checkStatus');;
 
-//login $logout
+//login & logout
 Route::get('/A_login','Admin@login');
 Route::post("admin/login",'Admin@clogin');
 Route::get('admin/home','Admin@adminhome')->middleware('checkStatus');
@@ -33,5 +33,5 @@ Route::get('/admin-events','EventController@Adminevents')->middleware('checkStat
 Route::get("/events",'EventController@AllEvents');
 Route::post('/Admin-events/store','EventController@AddEvent')->middleware('checkStatus');
 Route::post('/admin/event_delete/{eve}','EventController@Delete_event')->middleware('checkStatus');
-
-
+Route::get("/book/{eve}",'EventController@Event_book_form');
+Route::post("/Event-booked/{eve}",'EventController@Event_booked');

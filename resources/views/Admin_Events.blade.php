@@ -53,7 +53,7 @@
       <th scope="col">Location</th>
       <th scope="col">Instructor</th>
       <th scope="col">Entry type</th>
-      <th scope="col">Contact Num</th>
+      <th scope="col">No.Seats</th>
     </tr>
   </thead>
   <tbody>
@@ -65,7 +65,7 @@
       <td><input type="text" placeholder="location" required name="Event-Location"></td>
       <td><input type="text" placeholder="Instructor"required name="Event-Instructor"></td>
       <td><input type="text" placeholder="event type"required name="Event-Type"></td>
-      <td><input type="text" placeholder="number"required name="Event-Number"></td>
+      <td><input type="text" placeholder="Seats"required name="seats"></td>
     </tr>
        <tr>
      
@@ -100,7 +100,7 @@
       <th scope="col">place</th>
       <th scope="col">Instructor</th>
       <th scope="col">Entry type</th>
-      <th scope="col">Contact num</th>
+      <th scope="col">No.Seats</th>
     </tr>
   </thead>
    @foreach($event as $eve)
@@ -112,7 +112,7 @@
       <td>{{$eve->location}}</td>
       <td>{{$eve->instructor}}</td>
       <td>{{$eve->entrytype}}</td>
-      <td>{{$eve->contact}}</td>
+      <td>{{$eve->seats}}</td>
     </tr>
        <tr>
      <form action="/admin/event_delete/{{$eve->id}}" method="post" onsubmit ="return cinfirm()">

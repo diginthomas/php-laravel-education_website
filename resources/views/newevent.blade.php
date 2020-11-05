@@ -18,7 +18,7 @@
 
 	
 <!-- The most important information about the product -->
-		<p class="information">" Especially good for container gardening, the Angelonia will keep blooming all summer even if old flowers are removed. Once tall enough to cut, bring them inside and you'll notice a light scent that some say is reminiscent of apples. "</p>
+		<p class="information">" Attending a seminar has numerous benefits, including improving communication skills, gaining expert knowledge, networking with others and renewing motivation and confidence. "</p>
 
 		
 		
@@ -28,9 +28,9 @@
 <!-- Start Button buying -->
 	<button class="btn">
 <!-- 		the Price -->
-	 <span class="price"><i class="material-icons">&#xe7fb;</i>45</span>
-
-   <span class="buy">Apply Now</span>
+	 <span class="price"><i class="material-icons">&#xe7fb;</i>{{$eve->seats}}</span>
+<a href="/book/{{$eve->id}}">
+   <span class="buy">Apply Now</span></a>
  </button>
 	<!-- End Button buying -->
 	
@@ -54,10 +54,11 @@
 	<ul>
 		<li><strong>Date: </strong>{{$eve->date}}</li>
 		<li><strong>Time: </strong>{{$eve->time}} Am</li>
-		<li><strong>Zone: </strong>{{$eve->location}}</li>
+		<li><strong>Location: </strong>{{$eve->location}}</li>
 		<li><strong>Instructor: </strong>{{$eve->instructor}}</li>
 		<li><strong>Entry: </strong>{{$eve->entrytype}}</li>
-		<li><strong>Contact </strong>{{$eve->contact}}</li>
+		<li><strong>Available Slots: </strong>{{$eve->seats}}</li>
+
 	</ul>
 </div>
 </div>

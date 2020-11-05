@@ -140,17 +140,18 @@ p {
 	<div class="outer">
 		<div class="content animated fadeInLeft">
 			<span class="bg animated fadeInDown">Event Booked</span>
-			<h1>Data Science<br/>No.persons:4</h1>
-			<p>Shadow your real allegiance to New York's Pirate radio with this cool cap featuring the Graphic Know Wave logo.</p>
-			
+			<h1>{{$event_ticket->event_name}}<br/>No.persons:{{$event_ticket->no_person}}</h1>
+			<p><h3><b>Name:{{$event_ticket->name}}<br>
+			   Event Location:{{$event_ticket->location}} <br>Date: {{$event_ticket->date}} Time: {{$event_ticket->time}}<br></h3></b>
+				<b>*</b> pay entry-fees at enterence</p></p><br><font color="red">
+			    <small>issued on:{{$event_ticket->created_at}}</small></font>
 			<div class="button">
-				 <button type="button" class="btn btn-outline-primary">No.person:4</button>
+				 <button type="button" class="btn btn-outline-primary">Booking id:{{$event_ticket->id}}</button>
 			</div>
 			
 		</div>
 		<img src="https://i.postimg.cc/c4MRPDy4/logo.png" width="300px" class="animated fadeInRight">
 	</div>
-	<p class="footer">Based on the Silk UI Kit - DesignModo Market</p>
-</div>
+	
 </body>
 </html>
